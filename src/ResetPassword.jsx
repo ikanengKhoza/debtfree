@@ -9,12 +9,11 @@ function App() {
           element={
             <div style={{ padding: "2rem" }}>
               <h1>Debt Free Disciple</h1>
-              <p>Welcome to Debt Free Disciple</p>
             </div>
           }
         />
         <Route
-          path="/ResetPassword"
+          path="/reset-password"
           element={
             <div
               style={{
