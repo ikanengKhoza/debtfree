@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ResetPassword from "./ResetPassword";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
             <div style={{ padding: "2rem" }}>
               <h1>Debt Free Disciple</h1>
               <p>Welcome to Debt Free Disciple</p>
+              <p>Testing</p>
             </div>
           }
         />
@@ -29,10 +31,7 @@ function App() {
               }}
             >
               <div>
-                <h1>Redirecting to app...</h1>
-                <p>
-                  Please open the Debt Free Disciple app to reset your password.
-                </p>
+                <ResetPassword />
               </div>
             </div>
           }
