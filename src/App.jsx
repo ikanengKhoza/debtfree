@@ -11,7 +11,6 @@ function App() {
             <div style={{ padding: "2rem" }}>
               <h1>Debt Free Disciple</h1>
               <p>Welcome to Debt Free Disciple</p>
-              <p>Testing</p>
             </div>
           }
         />
