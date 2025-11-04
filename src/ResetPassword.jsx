@@ -3,31 +3,17 @@ import { useEffect } from "react";
 export default function ResetPasswordBridge() {
   useEffect(() => {
     const hash = window.location.hash.substring(1);
+    if (!hash) return;
 
-    if (!hash) {
-      alert("Invalid reset link. Please try again.");
-      return;
-    }
+    const deepLink = `debtfreedisciple://auth/ResetPassword#${hash}`;
+    console.log("Redirecting to app:", deepLink);
+    window.location.href = deepLink;
 
-    const deepLink = `debtfreedisciple://ResetPassword#${hash}`;
-    console.log("Redirecting to deep link:", deepLink);
-
-    window.location.replace(deepLink);
-
-    const fallback = setTimeout(() => {
-      window.location.href = "/open/app-instructions";
+    setTimeout(() => {
+      window.location.href =
+        "https://play.google.com/store/apps/details?id=com.yourcompany.debtfreedisciple";
     }, 2000);
-
-    return () => clearTimeout(fallback);
   }, []);
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "4rem" }}>
-      <h2>Opening DebtFreeDisciple App...</h2>
-      <p>
-        If nothing happens,{" "}
-        <a href="debtfreedisciple://ResetPassword">tap here</a>.
-      </p>
-    </div>
-  );
+  return <p>Opening Debt Free Disciple app...</p>;
 }
