@@ -71,6 +71,9 @@ function Home() {
           <Link to="/TermsOfUse" className="btn btn-outline-success btn-lg">
             Terms of Use
           </Link>
+          <Link to="/About" className="btn btn-outline-success btn-lg">
+            About
+          </Link>
         </div>
       </div>
     </div>

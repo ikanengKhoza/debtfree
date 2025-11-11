@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Privacy from "./Privacy";
 import TermsOfUse from "./TermsOfUse";
+import About from "./About";
 
 function App() {
   return (
@@ -12,6 +13,15 @@ function App() {
           element={
             <div style={{ padding: "2rem" }}>
               <Home />
+            </div>
+          }
+        />
+
+        <Route
+          path="/About"
+          element={
+            <div style={{ padding: "2rem" }}>
+              <About />
             </div>
           }
         />
